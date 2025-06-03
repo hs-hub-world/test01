@@ -9,7 +9,7 @@ jobs:
   say-hello:
     runs-on: ubuntu-latest
     outputs:
-      my_var: ${{ steps.set_output.outputs.my-var }}
+      my_var: ${{ steps.set_output.outputs.my_var }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
