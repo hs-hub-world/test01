@@ -4,11 +4,11 @@ on:
   push:
     branches:
       - main
-      
+
 jobs:
   CreateFile:
-  runs-on: ubuntu-latest
-  steps:
+    runs-on: ubuntu-latest
+    steps:
     - name: Create File
       run: echo "Create file" >> ./myfile.txt
     - name: List file 1
