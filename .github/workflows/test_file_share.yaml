@@ -1,5 +1,10 @@
-name: "File test"
+name: File test
 
+on:
+  push:
+    branches:
+      - main
+      
 jobs:
   CreateFile:
   runs-on: ubuntu-latest

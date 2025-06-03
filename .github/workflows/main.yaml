@@ -39,5 +39,3 @@ jobs:
         run: pwd
       - name: Get Variable From prev. Job
         run: echo "The Var is ${{ needs.say-hello.outputs.my_var }}"
-
-
