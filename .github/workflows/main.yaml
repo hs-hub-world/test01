@@ -17,7 +17,6 @@ jobs:
         id: set_output
         run: echo "my_var=HelloFromJob1"  >> $GITHUB_OUTPUT
       - name: Assign Var2
-        id: set_output
         run: echo "my_var=HelloFromJob2"  >> $GITHUB_ENV
       - name: test Local my_var1
         run: echo "echo $my_var"
