@@ -1,0 +1,12 @@
+name: "File test"
+
+jobs:
+  CreateFile:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Create File
+      run: echo "Create file" >> ./myfile.txt
+    - name: List file 1
+      run: ls -lah
+    - name: List File 2
+      run: ls -lah ./
