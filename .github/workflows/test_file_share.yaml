@@ -1,5 +1,9 @@
 name: File test
 
+permissions:
+  actions: read
+  contents: read
+  
 on:
   push:
     branches:
