@@ -1,0 +1,18 @@
+name: File download test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  CreateFile:
+    runs-on: ubuntu-latest
+    steps:
+    - name: List file Pre
+      run: ls -lah
+    - uses: actions/download-artifact@v4
+      with:
+        name: mydata
+    - name: List file Post
+      run: ls -lah
