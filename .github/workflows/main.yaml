@@ -23,4 +23,7 @@ jobs:
         run: whoami
       - name: step-3
         run: hostname
-        
+      - name: step-4
+        run: tree
+
+
