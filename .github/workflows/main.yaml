@@ -14,3 +14,13 @@ jobs:
 
       - name: Say Hello
         run: echo "Hello, World!"
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step-1
+        run: ls -lah
+      - name: step-2
+        run: whoami
+      - name: step-3
+        run: hostname
+        
