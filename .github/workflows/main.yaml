@@ -25,5 +25,7 @@ jobs:
         run: hostname
       - name: step-4
         run: tree
+      - name: step-5
+        run: pwd
 
 
