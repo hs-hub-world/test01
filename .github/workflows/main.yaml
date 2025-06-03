@@ -13,11 +13,13 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-
       - name: Say Hello
         id: set_output
         run: echo "my_var=HelloFromJob1"  >> $GITHUB_OUTPUT
-        #run: echo "Hello, World!"
+      - name: test var
+        run: echo "echo $my_var"
+      - name: test Env Var
+        run: set
 
   Build:
     runs-on: ubuntu-latest
