@@ -1,0 +1,13 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assign Var2
+        run: echo "my_var=HelloFromJob2"  >> $GITHUB_ENV
