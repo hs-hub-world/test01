@@ -14,8 +14,9 @@ jobs:
           ACTION_VAR_1: ${{ vars.ACTION_VAR_1 }}
       - name: Get_Env_Var-2
         run: echo "Env Var Value is ${{ vars.ACTION_VAR_1 }}"
-      - name: Get_Env_Var-2
-        run: echo "Env Var Value is {{ GITHUB_WORKFLOW.ACTION_VAR_1}}"
+      - name: Testing Var from a cmd line
+        run: |
+           echo "Env Var Value is ${{ vars.ACTION_VAR_1 }}"
 
         
     
