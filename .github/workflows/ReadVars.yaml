@@ -37,8 +37,8 @@ jobs:
       - name: List Env vars.ACTION_VAR_1
         run: printenv | sort
       - name: Reading Env Var
-        run: echo "Env Var Value is $MY_VAR_1"
+        run: echo "#1 Env Var Value is ${{ vars.MY_VAR_1 }}"
       - name: Manually pass the var
         env:
           MY_VAR_1: ${{ vars.MY_VAR_1 }}  # fallback if GitHub UI env var fails
-        run: echo "Env Var Value is $MY_VAR_1"
+        run: echo "#2 Env Var Value is $MY_VAR_1"
