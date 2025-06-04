@@ -27,7 +27,7 @@ jobs:
         run: echo "Env Var Value is ${{ vars.ACTION_VAR_1 }}"
       - name: Testing Var from a cmd line
         run: |
-           bash echo "Env Var Value is ${{ vars.ACTION_VAR_1 }}"
+           echo "Env Var Value is ${{ vars.ACTION_VAR_1 }}"
 
         
   read_vars2_env:
