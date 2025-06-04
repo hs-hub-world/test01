@@ -16,6 +16,8 @@ jobs:
 
       - name: LS - post checkout
         run: ls -lah
+      - name: Tree
+        run: tree
 
       - name: Get_Env_Var-1
         run: echo "Env Var Value is $ACTION_VAR_1"
