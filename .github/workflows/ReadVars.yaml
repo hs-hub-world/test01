@@ -1,0 +1,18 @@
+name: CI_Read_Vars
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  read_vars:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get_Env_Var-1
+        run: echo "Env Var Value is {{ env.ACTION_VAR_1}}"
+      - name: Get_Env_Var-2
+        run: echo "Env Var Value is {{ GITHUB_REPOSITORY.ACTION_VAR_1}}"
+      - name: Get_Env_Var-2
+        run: echo "Env Var Value is {{ GITHUB_WORKFLOW.ACTION_VAR_1}}"
+        
+    
