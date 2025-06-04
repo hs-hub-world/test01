@@ -30,4 +30,20 @@ jobs:
            bash echo "Env Var Value is ${{ vars.ACTION_VAR_1 }}"
 
         
-    
+  read_vars2_env:
+  runs-on: ubuntu-latest
+  environment: DEV-01
+  steps:
+    - name: LS - pre checkout
+      run: ls -lah
+
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: LS - post checkout
+      run: ls -lah
+    - name: Tree
+      run: tree
+
+    - name: Reading Env Var
+      run: echo "Env Var Value is $MY_VAR_1"
