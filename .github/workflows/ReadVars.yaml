@@ -8,6 +8,15 @@ jobs:
   read_vars:
     runs-on: ubuntu-latest
     steps:
+      - name: LS - pre checkout
+        run: ls -lah
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: LS - post checkout
+        run: ls -lah
+
       - name: Get_Env_Var-1
         run: echo "Env Var Value is $ACTION_VAR_1"
         env:
@@ -16,7 +25,7 @@ jobs:
         run: echo "Env Var Value is ${{ vars.ACTION_VAR_1 }}"
       - name: Testing Var from a cmd line
         run: |
-           echo "Env Var Value is ${{ vars.ACTION_VAR_1 }}"
+           bash echo "Env Var Value is ${{ vars.ACTION_VAR_1 }}"
 
         
     
