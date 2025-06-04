@@ -34,16 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: DEV-01
     steps:
-      - name: LS - pre checkout
-        run: ls -lah
-
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: LS - post checkout
-        run: ls -lah
-      - name: Tree
-        run: tree
-
+      - name: List Env vars.ACTION_VAR_1
+        run: printenv | sort
       - name: Reading Env Var
         run: echo "Env Var Value is $MY_VAR_1"
