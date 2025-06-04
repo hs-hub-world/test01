@@ -9,10 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get_Env_Var-1
-        run: echo "Env Var Value is {{ env.ACTION_VAR_1}}"
+        run: echo "Env Var Value is $ACTION_VAR_1"
+        env:
+          ACTION_VAR_1: ${{ vars.ACTION_VAR_1 }}
       - name: Get_Env_Var-2
-        run: echo "Env Var Value is {{ GITHUB_REPOSITORY.ACTION_VAR_1}}"
+        run: echo "Env Var Value is ${{ vars.ACTION_VAR_1 }}"
       - name: Get_Env_Var-2
         run: echo "Env Var Value is {{ GITHUB_WORKFLOW.ACTION_VAR_1}}"
+
         
     
